@@ -6,18 +6,23 @@ public class DatabaseTest {
 		
 		Customer lucas = new Customer();
 		
-		lucas.name = "Lucas Aragão";
-		lucas.cellphoneNumber = "(99) 99999-9999";
-		lucas.cpf = "999.999.999-99";
-		lucas.job = "QA Inter";
+		//lucas.name = "Lucas Aragão";
+		//lucas.cellphoneNumber = "(99) 99999-9999";
+		//lucas.cpf = "999.999.999-99";
+		//lucas.job = "QA Inter";
+		
+		lucas.setName("Lucas Aragao");
+		lucas.setCellphoneNumber("(99) 99999-9999");
+		lucas.setCpf("999.999.999-99");
+		lucas.setJob("QA Inter");
 		
 		Account lucasAccount = new Account();
 		
 		lucasAccount.deposit(100);
 		
-		lucasAccount.cardHolder = lucas;
+		lucasAccount.setCardHolder(lucas);
 		
-		System.out.println(lucasAccount.cardHolder.name);
+		System.out.println(lucasAccount.getCardHolder().getName());
 
 	}
 	

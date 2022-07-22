@@ -1,10 +1,10 @@
 
 public class Account {
 
-	double balance;
-	int bankCode;
-	int accountNumber;
-	Customer cardHolder;	
+	private double balance;
+	private int bankCode;
+	private int accountNumber;
+	private Customer cardHolder;	
 
 	public void deposit(double value) {
 		
@@ -27,12 +27,12 @@ public class Account {
 		}
 	};
 	
-	public boolean transfer(double value, Account destiny) {
+	public boolean transfer(double value, Account destination) {
 		
 		if (this.balance >= value) {
 				
 			this.balance -= value;
-			destiny.deposit(value);
+			destination.deposit(value);
 			return true;
 				
 		} else {
@@ -42,4 +42,29 @@ public class Account {
 			
 		}
 	}
+	
+	public double getBalance() {
+		return this.balance;
+	}
+	
+	public int getBankCode() {
+		return this.bankCode;
+	}
+	public void setBankCode(int bankCode) {
+		this.bankCode = bankCode;
+	}
+	public int getAccountNumber() {
+		return this.accountNumber;
+	}
+	public void setAccountNumber(int accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+	public Customer getCardHolder() {
+		return this.cardHolder;
+	}
+	public void setCardHolder(Customer newCardHolder) {
+		this.cardHolder = newCardHolder;
+	}
+	
+	
 }
