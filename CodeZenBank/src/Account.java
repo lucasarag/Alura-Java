@@ -1,11 +1,11 @@
 
 public class Account {
 
+	double balance;
 	int bankCode;
 	int accountNumber;
-	String cardHolder;
-	double balance;
-	
+	Customer cardHolder;	
+
 	public void deposit(double value) {
 		
 		this.balance += value;
@@ -41,7 +41,5 @@ public class Account {
 			return false;
 			
 		}
-		
 	}
-
 }
